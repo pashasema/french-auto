@@ -1,0 +1,90 @@
+
+@import "../modules/vars";
+
+/*==========================
+	Mailchimp form
+============================*/
+
+/*h2*/.mailchimp-popup__title {
+	text-align: center;
+	margin-top: 0;
+	line-height: 1.2;
+}
+
+.mailchimp__info {
+	font-weight: 700;
+	font-size: 1em;
+	text-align: center;
+	line-height: 1.3;
+}
+
+#mc_embed_signup input.mce_inline_error {
+	border-color: $lightred;
+}
+
+
+#mc_embed_signup_scroll .mc-field-group div.mce_inline_error {
+	font-weight: 500;
+	position: relative;
+	background-color: $lightred;
+	border-radius: $borderradius;
+	font-size: .8em;
+
+	&:after {
+		content: "";
+		position: absolute;
+		top: -1.3em;
+		right: 1em;
+		border: 10px solid transparent;
+		border-bottom-color: $lightred;
+		width: 1px;
+		z-index: 4;
+	}
+}
+
+#mce-error-response {
+	background-color: $lightred;
+	border-radius: $borderradius;
+	margin: 0 0 1em 0;
+	padding: 5px 10px;
+	position: relative;
+	font-size: .8em;
+	color: #fff;
+
+	&:after {
+		content: "";
+		position: absolute;
+		top: -1.1em;
+		right: 1em;
+		border: 10px solid transparent;
+		border-bottom-color: $lightred;
+		width: 1px;
+		z-index: 4;
+	}
+
+	a {
+		color: #fff;
+		text-decoration: underline;
+	}
+}
+
+#mce-success-response {
+	background-color: $lightgreen;
+	border-radius: $borderradius;
+	margin: 0 0 1em 0;
+	padding: 5px 10px;
+	color: #fff;
+	position: relative;
+	font-size: .8em;
+
+	&:after {
+		content: "";
+		position: absolute;
+		top: -1.3em;
+		right: 1em;
+		border: 10px solid transparent;
+		border-bottom-color: $lightgreen;
+		width: 1px;
+		z-index: 4;
+	}
+}

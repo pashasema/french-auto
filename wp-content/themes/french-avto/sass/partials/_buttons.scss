@@ -1,0 +1,162 @@
+
+@import "../modules/vars";
+
+// Buttons
+//
+// Various button styles.
+//
+// Markup:
+// <a class="btn {{modifier_class}}" href="#">Button Element</a>
+// <button class="btn {{modifier_class}}">Button Element</button>
+// <input class="btn {{modifier_class}}" type="button" value="Input Button" />
+//
+// .btn--outline - Outlined button.
+// .btn--accent - Accent button color.
+// 
+// Styleguide Components.button
+.btn {
+	display: inline-block;
+  text-align: center;
+  border-radius: 10px;
+  transition: .6s ease-out;
+  position: relative;
+  font-size: 16px;
+  line-height: 20px;
+  color: #ffffff;
+  background-color: $main-color;
+  padding: 15px 35px;
+  font-weight: 700;
+  cursor: pointer;
+  text-decoration: none;
+  position: relative;
+  border: none;
+  overflow: hidden; 
+  &:before{
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    content: "";
+    background-color: #ffffff;
+    transform: scale(0, 1);
+    transform-origin: top right;
+    transition: transform 500ms cubic-bezier(0.860, 0.000, 0.070, 1.000);
+    transition-timing-function: cubic-bezier(0.860, 0.000, 0.070, 1.000);
+  }
+
+  &:hover {
+    color: $main-color;
+    &:before{
+     transform: scale(1, 1); 
+     transform-origin: bottom left;
+   }
+   text-decoration: none;
+ }
+
+ &:active,
+ &:focus {
+   text-decoration: none;
+ }
+}
+.inner-btn{
+  position: relative;
+}
+
+.btn--email {
+  width: 100%;
+}
+
+.btn--outline {
+	background-color: transparent;
+  border: 1px solid #fff;
+  color: #fff;
+
+  &:hover {
+    background-color: #fff;
+    color: $accent;
+  }
+}
+
+.btn--wa {
+	margin-right: .7em;
+  background-color: $accent;
+
+  &:hover {
+    color: $accent;
+  }
+}
+
+.btn--accent {
+  background-color: $accent;
+  color: #fff;
+
+  &:hover {
+    color: $accent;
+  }
+}
+
+.btn--google {
+  background-color: #DF4B38;
+  color: #fff;
+  width: 100%;
+  display: inline-block;
+
+  &:hover,
+  &:active,
+  &:focus {
+    background-color: lighten(#DF4B38, 10%);
+    color: #fff;
+    outline: 0;
+  }
+}
+
+.btn--facebook {
+  background-color: #3B5998;
+  margin-top: .6em;
+  color: #fff;
+  width: 100%;
+  display: inline-block;
+
+  &:hover,
+  &:active,
+  &:focus {
+    background-color: lighten(#3B5998, 10%);
+    color: #fff;
+    outline: 0;
+  }
+}
+
+.btn--login {
+  width: 100%;
+  border: none;
+
+  &:hover,
+  &:active,
+  &:focus {
+    background-color: lighten($accent, 10%);
+    color: #fff;
+    outline: 0;
+  }
+}
+
+.btn--mobilemenu {
+  color: #fff;
+  font-size: 1em;
+  background-color: $blue;
+  line-height: 2.5em;
+  padding: 0 1em;
+  @include trans(all);
+
+  &:hover {
+    background-color: $blue;
+    color: #fff;
+  }
+
+  &:active,
+  &:focus {
+    background-color: $blue;
+    outline: 0;
+    color: #fff;
+  }
+}

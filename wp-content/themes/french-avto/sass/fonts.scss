@@ -1,0 +1,16 @@
+@import "modules/mixins";
+
+// Roboto Condensed
+@include font-face("Roboto Condensed", "../fonts/RobotoCondensed/RobotoCondensedLight/RobotoCondensedLight", 300);
+@include font-face("Roboto Condensed", "../fonts/RobotoCondensed/RobotoCondensedRegular/RobotoCondensedRegular", 400);
+@include font-face("Roboto Condensed", "../fonts/RobotoCondensed/RobotoCondensedBold/RobotoCondensedBold", 600);
+
+//Roboto
+@include font-face("Roboto", "../fonts/Roboto/RobotoLight/RobotoLight", 300);
+@include font-face("Roboto", "../fonts/Roboto/RobotoRegular/RobotoRegular", 400);
+@include font-face("Roboto", "../fonts/Roboto/RobotoBold/RobotoBold", 600);
+
+//ProximaNova
+@include font-face("ProximaNova", "../fonts/ProximaNova/ProximaNova-Regular/ProximaNova-Regular", 300);
+@include font-face("ProximaNova", "../fonts/ProximaNova/ProximaNova-Regular/ProximaNova-Regular", 400);
+@include font-face("ProximaNova", "../fonts/ProximaNova/ProximaNova-Bold/ProximaNova-Bold", 700);
